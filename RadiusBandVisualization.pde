@@ -23,7 +23,7 @@ void draw(){
 
   for(int i = 0; i < maxSteps; i++) {
     float shortRadius = 0;
-    float longRadius = 200 + (height/127 * currentData[i]);
+    float longRadius = 200 + (height/32 * log(currentData[i]));
 
     // calculate the coordinates to draw the lines
     float x1 = cos(radians(currentAngle * i)) * shortRadius;
